@@ -1,7 +1,8 @@
-$fa = 4; $fs = 0.4;
+// https://en.wikipedia.org/wiki/Moravian_star
+$fa = 4; $fs = 0.2;
 
-r = 20;
-length = 50;
+r = 8;
+length = 18;
 
 // edge length of a 8 sided polygon with outer radius r
 function edge(r) = r * sqrt(2 - sqrt(2));
@@ -12,14 +13,11 @@ module base() {
     }
 }
 
-module part(r) {
-}
-
 module quad(r) {
     l = r * cos(360/16);
     hull() {
         translate([0, 0, l - edge(r)/2]) cube(edge(r), center = true);
-        translate([0, 0, l + length]) sphere(1);
+        translate([0, 0, l + length]) sphere(0.5);
     }
 }
 
@@ -27,26 +25,27 @@ module quad(r) {
 module tri(r) {
     // radius of outer circle of equilateral triangle
     rt = edge(r) * sqrt(3) / 3;
-    // radius of circumscribed circle of triangle with half the side length
-    rc = edge(r) / 2 / sqrt(3);
+    // diameter of circumscribed circle of triangle with half the side length
+    dc = edge(r) / sqrt(3);
     // https://en.wikipedia.org/wiki/Circular_segment
-    h = r - 1/2 * sqrt(4 * pow(r, 2) - pow(rc, 2));
+    h = r - 1/2 * sqrt(4 * pow(r, 2) - pow(dc, 2));
     hull() {
-        translate([0, 0, r - h])
-            linear_extrude(2, center = true)
+        translate([0, 0, r - h - edge(r)/2])
+            linear_extrude(edge(r), center = true)
                 polygon([for (a = [0: 120 : 240]) rt * [ -sin(a), cos(a) ] ]);
-*        translate([0, 0, l + length]) sphere(1);
+        translate([0, 0, length]) sphere(0.5);
     }
 }
 
 module star() {
-    *sphere(r);
     %hull() {
         base();
         rotate([90, 0, 0]) base();
     }
     
     color("red") {
+        rotate([90, 0, 90]) quad(r);
+        rotate([90, 0, 270]) quad(r);
         for (rot = [0 : 45 : 315]) {
             rotate([rot, 0, 0]) quad(r);
         }
@@ -57,8 +56,14 @@ module star() {
             }
         }
     }
-    
-    rotate(45) rotate([54.7, 0, 0]) tri(r);
+    color("gold") {
+        for (rot = [45 : 90 : 315]) {
+            rotate(rot) {
+                rotate([54.7, 0, 0]) tri(r);
+                rotate([54.7+180, 0, 0]) tri(r);
+            }
+        }
+    }
 }
 
 star();
