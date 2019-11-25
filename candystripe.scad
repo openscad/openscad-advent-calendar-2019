@@ -1,6 +1,4 @@
 // "A Pile of Peppermint"
-//  by Hans Loeblich
-
 d = 6;
 l = 120;
 turns = 4;
@@ -48,3 +46,14 @@ module squished_ends(d,l,squish=0.5) {
     scale([1,1,squish]) translate([0,0,d/2]) sphere(d=d);
   }
 } 
+
+// Written in 2019 by Hans Loeblich <thehans@gmail.com>
+//
+// To the extent possible under law, the author(s) have dedicated all
+// copyright and related and neighboring rights to this software to the
+// public domain worldwide. This software is distributed without any
+// warranty.
+//
+// You should have received a copy of the CC0 Public Domain
+// Dedication along with this software.
+// If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.

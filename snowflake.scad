@@ -13,7 +13,9 @@ cols = 5;
 rows = 5;
 
 seed0 = seed == -1 ? ceil(rands(0,1,1)[0]*10000) : seed;
+echo();
 echo(seed0=seed0);
+echo();
 
 h = w/2*tan(30);
 for(x=[0:1:cols-1],y=[0:1:rows-1]) {
@@ -63,3 +65,14 @@ module branch3D(i,l,w,seed) {
         branch3D(i-1,l*(1-rnds[1]/7),w,rnds[2]);
   }
 }
+
+// Written in 2019 by Hans Loeblich <thehans@gmail.com>
+//
+// To the extent possible under law, the author(s) have dedicated all
+// copyright and related and neighboring rights to this software to the
+// public domain worldwide. This software is distributed without any
+// warranty.
+//
+// You should have received a copy of the CC0 Public Domain
+// Dedication along with this software.
+// If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
