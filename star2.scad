@@ -7,12 +7,6 @@ length = 18;
 // edge length of a 8 sided polygon with outer radius r
 function edge(r) = r * sqrt(2 - sqrt(2));
 
-module base() {
-    linear_extrude(edge(r), center = true) {
-        rotate(22.5) polygon([for (a = [0:7]) r * [-sin(45 * a), cos(45 * a)] ]);
-    }
-}
-
 module quad(r) {
     l = r * cos(360/16);
     hull() {
@@ -38,11 +32,6 @@ module tri(r) {
 }
 
 module star() {
-    %hull() {
-        base();
-        rotate([90, 0, 0]) base();
-    }
-    
     color("red") {
         rotate([90, 0, 90]) quad(r);
         rotate([90, 0, 270]) quad(r);
@@ -59,8 +48,9 @@ module star() {
     color("gold") {
         for (rot = [45 : 90 : 315]) {
             rotate(rot) {
-                rotate([54.7, 0, 0]) tri(r);
-                rotate([54.7+180, 0, 0]) tri(r);
+                angle = asin((sqrt(2)) / sqrt(3));
+                rotate([angle, 0, 0]) tri(r);
+                rotate([angle + 180, 0, 0]) tri(r);
             }
         }
     }
