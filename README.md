@@ -11,7 +11,7 @@
 - [ ] `Mo 9. ?`
 - [ ] `Tu 10. ?`
 - [ ] `We 11. ?`
-- [ ] `Th 12. peppermint sticks`
+- [x] `Th 12. peppermint sticks`
 - [ ] `Fr 13. ?`
 - [ ] `Sa 14. ?`
 - [ ] `Su 15. candleholder3`
