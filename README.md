@@ -7,14 +7,14 @@
 - [ ] `Th 5. snowflake2d`
 - [x] `Fr 6. tree`
 - [ ] `Sa 7. ?`
-- [ ] `Su 8. candleholder2`
+- [x] `Su 8. candleholder2`
 - [ ] `Mo 9. ?`
 - [ ] `Tu 10. ?`
 - [ ] `We 11. ?`
-- [x] `Th 12. peppermint sticks`
+- [x] `Th 12. candystripe`
 - [ ] `Fr 13. ?`
 - [ ] `Sa 14. ?`
-- [ ] `Su 15. candleholder3`
+- [x] `Su 15. candleholder3`
 - [ ] `Mo 16. ?`
 - [x] `Tu 17. snowflake3d`
 - [ ] `We 18. ?`
