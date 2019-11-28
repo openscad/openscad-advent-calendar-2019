@@ -6,7 +6,7 @@
 - [x] `We 4. star1`
 - [ ] `Th 5. snowflake2d`
 - [x] `Fr 6. tree`
-- [ ] `Sa 7. ?`
+- [x] `Sa 7. train`
 - [x] `Su 8. candleholder2`
 - [ ] `Mo 9. ?`
 - [ ] `Tu 10. ?`
@@ -21,7 +21,7 @@
 - [x] `Th 19. star2`
 - [ ] `Fr 20. ?`
 - [ ] `Sa 21. ?`
-- [ ] `Su 22. candleholder4`
+- [x] `Su 22. candleholder4`
 - [ ] `Mo 23. ?`
 - [x] `Tu 24. wreath`
 ```
