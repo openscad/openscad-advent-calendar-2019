@@ -6,7 +6,7 @@
 - [x] `Mo 2. cookie-cutter`
 - [x] `Tu 3. snowman`
 - [x] `We 4. star1`
-- [ ] `Th 5. snowflake2d`
+- [x] `Th 5. snowflake2d`
 - [x] `Fr 6. tree`
 - [x] `Sa 7. train`
 - [x] `Su 8. candleholder2`
@@ -14,7 +14,7 @@
 - [ ] `Tu 10. ?`
 - [ ] `We 11. ?`
 - [x] `Th 12. candystripe`
-- [ ] `Fr 13. ?`
+- [x] `Fr 13. christmas-bulbs`
 - [ ] `Sa 14. ?`
 - [x] `Su 15. candleholder3`
 - [ ] `Mo 16. ?`
