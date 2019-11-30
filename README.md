@@ -1,5 +1,7 @@
 # openscad-advent-calendar-2019
 
+![screenshot](advent-calendar-2019.png)
+
 - [x] `Su 1. candleholder1`
 - [x] `Mo 2. cookie-cutter`
 - [x] `Tu 3. snowman`
