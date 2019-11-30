@@ -21,7 +21,7 @@ module candleholder() {
     translate([0, 0, height - 1]) candle();
 }
 
-candleholder();
+translate([30, 30, 0]) candleholder();
 
 // Written in 2019 by Torsten Paul <Torsten.Paul@gmx.de>
 //

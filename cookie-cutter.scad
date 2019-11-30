@@ -40,8 +40,8 @@ module cookie_cutter(height = 12, base_height = 1, r1 = 0.8, r2 = 0.2) {
     }
 }
 
-translate([-50, 0, 0]) cookie_cutter() star(5, 22, 40);
-translate([50, 0, 0]) cookie_cutter() heart(30);
+translate([-42, 0, 0]) cookie_cutter() star(5, 22, 40);
+translate([36, 0, 0]) cookie_cutter() heart(35);
 
 // Written in 2019 by Torsten Paul <Torsten.Paul@gmx.de>
 //

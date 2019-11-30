@@ -8,7 +8,7 @@
 - [x] `Fr 6. tree`
 - [x] `Sa 7. train`
 - [x] `Su 8. candleholder2`
-- [ ] `Mo 9. ?`
+- [x] `Mo 9. jingle-bells`
 - [ ] `Tu 10. ?`
 - [ ] `We 11. ?`
 - [x] `Th 12. candystripe`
