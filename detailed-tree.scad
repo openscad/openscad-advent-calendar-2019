@@ -1,6 +1,7 @@
 $fa=1;
 $fs=0.4;
 
+anim = false;
 leaf_width = 3;
 ball_density = 0.3;
 ball_rad = 2;
@@ -11,7 +12,6 @@ seed = -1;
 if (seed >= 0) {
   _ = rands(0,1,1,seed);
 }
-
 
 function r(s) = rands(-s,s,1)[0];
 function rp(s) = rands(0,s,1)[0];
@@ -139,9 +139,11 @@ module RotateTree(height, diam) {
     Tree(height, diam);
 }
 
-Tree(height, diam);
-//RotateTree(height, diam);
-
+if (anim) {
+  RotateTree(height, diam);
+} else {
+  Tree(height, diam);
+}
 
 // Written in 2019 by Ryan A. Colyer
 //

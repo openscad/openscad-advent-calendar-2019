@@ -1,5 +1,4 @@
-PARAMS=$(wildcard *.param)
-PNGS=$(patsubst %.param,%.png,$(PARAMS))
+PNGS=$(patsubst %.param,%.png,$(wildcard *.param))
 
 _%.png : %.param .options
 	openscad -o $@ `cat .options` `cat $<`
