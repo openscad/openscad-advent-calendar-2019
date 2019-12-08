@@ -9,6 +9,7 @@ _%.png : %.param .options
 
 all : $(PNGS)
 	bash overview.sh
+	for a in $$(seq 1 24); do N=$$(printf "%02d.param" $$a); echo "$$N: $$(cat $$N 2>/dev/null)" ; done
 
 sync :
 	rsync -avP [0-2][0-9].png [0-2][0-9].scad openscad@files.openscad.org:tmp/
