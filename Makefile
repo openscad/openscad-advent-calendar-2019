@@ -1,5 +1,4 @@
-PARAMS=$(wildcard *.param)
-PNGS=$(patsubst %.param,%.png,$(PARAMS))
+PNGS=$(patsubst %.param,%.png,$(wildcard *.param))
 
 _%.png : %.param .options
 	openscad -o $@ `cat .options` `cat $<`
@@ -9,6 +8,7 @@ _%.png : %.param .options
 	convert $< -scale 240x-1 $@
 
 all : $(PNGS)
+	bash overview.sh
 
 sync :
 	rsync -avP [0-2][0-9].png [0-2][0-9].scad openscad@files.openscad.org:tmp/
