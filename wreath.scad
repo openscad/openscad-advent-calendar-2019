@@ -1,6 +1,14 @@
 $fa=1;
 $fs=0.4;
 
+anim = false;
+seed = -1;  // random
+//seed = 71;  // selected
+if (seed >= 0) {
+  _ = rands(0,1,0,seed);
+}
+
+
 function r(s) = rands(-s,s,1)[0];
 function rp(s) = rands(0,s,1)[0];
 
@@ -111,7 +119,21 @@ module Wreath(diam, thick=0) {
 }
 
 
-Wreath(90);
+module RotateWreath(diam, thick=0) {
+  seed = seed < 0 ? 71 : seed;
+  _ = rands(0,1,0,seed);
+
+  rotate([0, 0, $t*360])
+    rotate([45, 0, 0])
+    Wreath(diam, thick);
+}
+
+
+if (anim) {
+  RotateWreath(90);
+} else {
+  Wreath(90);
+}
 
 
 // Written in 2019 by Ryan A. Colyer

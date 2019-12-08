@@ -8,9 +8,10 @@ ball_rad = 2;
 height = 70;
 diam = 30;
 
-seed = -1;
+seed = -1;  // Random
+//seed = 10;  // Selected
 if (seed >= 0) {
-  _ = rands(0,1,1,seed);
+  _ = rands(0,1,0,seed);
 }
 
 function r(s) = rands(-s,s,1)[0];
@@ -132,8 +133,8 @@ module RotateTree(height, diam) {
   $staron = round($t*10)%2 == 0;
   $sparkles = MakeSparkles();
 
-  seed = seed < 0 ? 0 : seed;
-  _ = rands(0,1,1,seed);
+  seed = seed < 0 ? 10 : seed;
+  _ = rands(0,1,0,seed);
 
   rotate([0, 0, $t*360])
     Tree(height, diam);
