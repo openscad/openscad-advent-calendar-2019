@@ -19,7 +19,7 @@
 - [x] `Su 15. candleholder3`
 - [x] `Mo 16. wreath`
 - [x] `Tu 17. snowflake3d`
-- [ ] `We 18. ?`
+- [x] `We 18. snowfall`
 - [x] `Th 19. star2`
 - [ ] `Fr 20. ?`
 - [ ] `Sa 21. ?`
