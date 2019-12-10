@@ -21,7 +21,7 @@
 - [x] `Tu 17. snowflake3d`
 - [x] `We 18. snowfall`
 - [x] `Th 19. star2`
-- [ ] `Fr 20. ?`
+- [x] `Fr 20. tutorial-sleigh`
 - [ ] `Sa 21. ?`
 - [x] `Su 22. candleholder4`
 - [x] `Mo 23. santa`
