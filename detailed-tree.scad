@@ -129,6 +129,7 @@ module Tree(height, diam) {
 
 
 module RotateTree(height, diam) {
+  // For animated rotation use an OpenSCAD version after 2019-12-16
   _sparkles = rands(0,1,1,$t);
   $staron = round($t*10)%2 == 0;
   $sparkles = MakeSparkles();

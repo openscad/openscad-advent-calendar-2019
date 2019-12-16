@@ -120,6 +120,7 @@ module Wreath(diam, thick=0) {
 
 
 module RotateWreath(diam, thick=0) {
+  // For animated rotation use an OpenSCAD version after 2019-12-16
   seed = seed < 0 ? 71 : seed;
   _ = rands(0,1,0,seed);
 
