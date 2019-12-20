@@ -22,7 +22,7 @@
 - [x] `We 18. snowfall`
 - [x] `Th 19. star2`
 - [x] `Fr 20. tutorial-sleigh`
-- [ ] `Sa 21. ?`
+- [x] `Sa 21. fireplace`
 - [x] `Su 22. candleholder4`
 - [x] `Mo 23. santa`
 - [x] `Tu 24. detailed-tree`
