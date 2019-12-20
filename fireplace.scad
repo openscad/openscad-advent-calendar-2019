@@ -1,4 +1,8 @@
+// View -> Animate | 10 fps, 40 steps
+// convert -delay 2 -loop 0 frame0*.png -scale 240x240 fireplace.gif
+
 $fn = 20;
+
 w=2;
 h=3;
 d=2;
@@ -21,7 +25,6 @@ ts = rands(0, 1, flames, rots[0]);
 module log() {
   color([0.4,0.2,0.07]) rotate([0,90]) {
     cylinder(d=d, h=10.5, center=true, $fn=30);
-    //translate([0,0,w/2]) rotate([43,25]) cylinder(d=d*0.62, h=d*1.1, $fn=30);
   }
 }
 
@@ -67,7 +70,7 @@ module bent_profile(width, l_bent, a_bent, r_bent, profile_size) {
 }
 
 module log_holder(width,depth,height,s) {
-  holder_color = [0.2,0.2,0.2];
+  holder_color = [0.4,0.4,0.4];
   leg_height = height-1*s;
   leg_angle = 75;
   leg_length = leg_height/s*sin(leg_angle);
@@ -80,13 +83,17 @@ module log_holder(width,depth,height,s) {
  }
 }
 
-log_holder(10,4,1.9,0.2);
+module fireplace() {
+    log_holder(10,4,1.9,0.2);
 
-translate([0,1,0]) bricks();
-rotate(-2) translate([0,0,3]) {
-  log();
-  fire();
+    translate([0,1,0]) bricks();
+    rotate(-2) translate([0,0,3]) {
+      log();
+      fire();
+    }
 }
+
+fireplace();
 
 // Written in 2019 by Hans Loeblich <thehans@gmail.com>
 //
